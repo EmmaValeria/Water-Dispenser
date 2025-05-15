@@ -1,12 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Dashboard from '../components/Dashboard.tsx';
+import Layout from "../layouts/Layout.astro";
+import Dashboard from "../components/Dashboard.tsx";
 
-const initialLevel = 12; // Mock initial level
+const initialLevel = 0; // Mock initial level
 ---
 
 <Layout title="AquaFlow - Control del Dispensador">
-  <main class="min-h-screen flex flex-col items-center bg-[linear-gradient(135deg,#0a2c3d_0%,#02050a_50%,_#0a2c3d_100%)] text-cyan-100">
+  <main
+    class="min-h-screen flex flex-col items-center bg-[linear-gradient(135deg,#0a2c3d_0%,#02050a_50%,_#0a2c3d_100%)] text-cyan-100"
+  >
     <h1 class="text-4xl font-bold mb-4 text-blue-200">AquaFlow</h1>
     <Dashboard client:load initialLevel={initialLevel} />
   </main>
